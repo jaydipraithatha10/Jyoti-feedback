@@ -5,8 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Jyoti Gruh Udhyog</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
@@ -19,74 +17,55 @@ font-family:'Poppins',sans-serif;
 }
 
 body{
-    margin:0;
-    padding:20px;
-    min-height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background:linear-gradient(135deg,#04261d,#0b4d39,#021a13);
-    overflow-x:hidden;
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:20px;
+background:linear-gradient(135deg,#03261d,#0a4b38,#02140f);
+overflow-x:hidden;
 }
-
-body::before{
-content:"";
-position:fixed;
-width:350px;
-height:350px;
-background:radial-gradient(rgba(255,215,0,.18),transparent 70%);
-top:-120px;
-left:-120px;
-border-radius:50%;
-animation:move1 10s infinite alternate;
-}
-
-body::after{
-content:"";
-position:fixed;
-width:350px;
-height:350px;
-background:radial-gradient(rgba(255,215,0,.15),transparent 70%);
-bottom:-120px;
-right:-120px;
-border-radius:50%;
-animation:move2 12s infinite alternate;
-}
-
-@keyframes move1{
-100%{transform:translate(70px,50px);}
-}
-
-@keyframes move2{
-100%{transform:translate(-70px,-50px);}
-}
-
 
 .card{
-    width:100%;
-    max-width:430px;
-    margin:0 auto;
-    background:rgba(255,255,255,.08);
-    backdrop-filter:blur(18px);
-    border:2px solid rgba(255,215,0,.45);
-    border-radius:30px;
-    padding:35px 25px;
-    text-align:center;
-    color:#fff;
-    box-shadow:0 20px 50px rgba(0,0,0,.45);
+width:100%;
+max-width:430px;
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(20px);
+border:2px solid rgba(255,215,0,.45);
+border-radius:28px;
+padding:35px 25px;
+text-align:center;
+box-shadow:0 20px 45px rgba(0,0,0,.45);
+color:#fff;
 }
-.diya{
-font-size:72px;
-filter:drop-shadow(0 0 20px gold);
+
+.logo{
+font-size:70px;
+filter:drop-shadow(0 0 18px gold);
 animation:glow 2s infinite alternate;
 }
 
 @keyframes glow{
 to{
-filter:drop-shadow(0 0 35px gold);
+filter:drop-shadow(0 0 30px gold);
+}
 }
 
-}.msg{
+h1{
+margin-top:12px;
+font-size:34px;
+background:linear-gradient(90deg,#FFD700,#FFF4B0,#FFD700);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.city{
+margin-top:8px;
+color:#FFD76C;
+letter-spacing:4px;
+font-size:20px;
+}
+.msg{
 margin-top:30px;
 font-size:22px;
 line-height:1.8;
@@ -103,13 +82,13 @@ display:block;
 width:100%;
 margin-top:35px;
 padding:18px;
-border-radius:16px;
+border-radius:18px;
 text-decoration:none;
-font-size:20px;
+font-size:22px;
 font-weight:700;
-color:#083322;
-background:linear-gradient(135deg,#FFD700,#FFF3A0,#FFD700);
-box-shadow:0 0 20px rgba(255,215,0,.45);
+color:#053322;
+background:linear-gradient(135deg,#FFD700,#FFF2A0,#FFD700);
+box-shadow:0 0 25px rgba(255,215,0,.45);
 transition:.3s;
 }
 
@@ -119,7 +98,7 @@ transform:scale(1.03);
 
 .footer{
 margin-top:30px;
-font-size:14px;
+font-size:15px;
 line-height:1.8;
 color:#ddd;
 }
@@ -128,19 +107,20 @@ color:#ddd;
 
 h1{font-size:30px;}
 
-.msg{font-size:20px;}
+.msg{font-size:19px;}
+
+.btn{font-size:20px;}
 
 }
 
 </style>
-
 </head>
 
 <body>
 
 <div class="card">
 
-<div class="diya">🪔</div>
+<div class="logo">🪔</div>
 
 <h1>Jyoti Gruh Udhyog</h1>
 
@@ -148,35 +128,29 @@ h1{font-size:30px;}
 
 <div class="msg">
 
-🙏 <span>નમસ્કાર</span>
+🙏 <span>નમસ્કાર</span><br><br>
 
-<br><br>
+અમારી પ્રોડક્ટ ખરીદવા બદલ<br>
 
-અમારી પ્રોડક્ટ ખરીદવા બદલ
+આપનો ખૂબ ખૂબ આભાર. ❤️<br><br>
 
-આપનો ખૂબ ખૂબ આભાર. ❤️
-
-<br><br>
-
-તમારો કિંમતી પ્રતિભાવ
+તમારો કિંમતી પ્રતિભાવ<br>
 
 અમારા માટે ખૂબ જ મહત્વનો છે.
 
 </div>
 
 <a class="btn"
-
 href="https://jaydipraithatha10.github.io/Jyoti-review/">
 
 ⭐ પ્રતિભાવ આપવા અહીં Click કરો
 
 </a>
-
 <div class="footer">
 
 ✨ Premium Quality<br>
-❤️ Customer Satisfaction<br>
-🪔 Jyoti Gruh Udhyog - Rajkot
+🏆 Trusted by Customers<br>
+❤️ Jyoti Gruh Udhyog - Rajkot
 
 </div>
 
@@ -185,18 +159,3 @@ href="https://jaydipraithatha10.github.io/Jyoti-review/">
 </body>
 
 </html>
-
-h1{
-margin-top:12px;
-font-size:34px;
-background:linear-gradient(90deg,#FFD700,#FFF4B2,#FFD700);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
-}
-
-.city{
-margin-top:8px;
-letter-spacing:5px;
-color:#FFD86C;
-font-size:20px;
-}
