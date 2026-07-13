@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jyoti Gruh Udhyog - Feedback</title>
+<title>Jyoti Gruh Udhyog</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
 
@@ -19,57 +19,71 @@ font-family:'Poppins',sans-serif;
 }
 
 body{
+min-height:100vh;
 display:flex;
 justify-content:center;
 align-items:center;
-min-height:100vh;
-background:linear-gradient(135deg,#062d22,#0d5a40,#021812);
-overflow:hidden;
 padding:20px;
+background:linear-gradient(135deg,#04261d,#0b4d39,#021a13);
+overflow:hidden;
 }
 
-body::before,
+body::before{
+content:"";
+position:fixed;
+width:350px;
+height:350px;
+background:radial-gradient(rgba(255,215,0,.18),transparent 70%);
+top:-120px;
+left:-120px;
+border-radius:50%;
+animation:move1 10s infinite alternate;
+}
+
 body::after{
 content:"";
 position:fixed;
 width:350px;
 height:350px;
-border-radius:50%;
-background:radial-gradient(circle,rgba(255,215,0,.15),transparent 70%);
-animation:move 10s infinite alternate;
-}
-
-body::after{
-right:-120px;
+background:radial-gradient(rgba(255,215,0,.15),transparent 70%);
 bottom:-120px;
-animation-delay:5s;
+right:-120px;
+border-radius:50%;
+animation:move2 12s infinite alternate;
 }
 
-body::before{
-left:-120px;
-top:-120px;
+@keyframes move1{
+100%{transform:translate(70px,50px);}
 }
 
-@keyframes move{
-100%{
-transform:translate(60px,40px) scale(1.2);
-}
+@keyframes move2{
+100%{transform:translate(-70px,-50px);}
 }
 
 .card{
+
 width:100%;
 max-width:430px;
+
 background:rgba(255,255,255,.08);
+
 backdrop-filter:blur(18px);
-border:2px solid rgba(255,215,0,.55);
-border-radius:28px;
+
+border:2px solid rgba(255,215,0,.45);
+
+border-radius:30px;
+
 padding:35px 25px;
+
 text-align:center;
-box-shadow:0 15px 40px rgba(0,0,0,.45);
+
 color:#fff;
+
+box-shadow:0 20px 50px rgba(0,0,0,.45);
+
 }
 
-.logo{
+.diya{
 font-size:72px;
 filter:drop-shadow(0 0 20px gold);
 animation:glow 2s infinite alternate;
@@ -79,80 +93,62 @@ animation:glow 2s infinite alternate;
 to{
 filter:drop-shadow(0 0 35px gold);
 }
-}
 
-.msg{
+}.msg{
 margin-top:30px;
 font-size:22px;
 line-height:1.8;
-color:#ffffff;
+color:#fff;
 }
 
 .msg span{
 color:#FFD700;
-font-weight:600;
+font-weight:700;
 }
 
 .btn{
 display:block;
+width:100%;
 margin-top:35px;
 padding:18px;
-border-radius:18px;
+border-radius:16px;
 text-decoration:none;
-font-size:22px;
+font-size:20px;
 font-weight:700;
-color:#053625;
-background:linear-gradient(135deg,#FFD700,#FFE36A,#FFC107);
-box-shadow:0 0 25px rgba(255,215,0,.45);
+color:#083322;
+background:linear-gradient(135deg,#FFD700,#FFF3A0,#FFD700);
+box-shadow:0 0 20px rgba(255,215,0,.45);
 transition:.3s;
 }
 
 .btn:hover{
-transform:scale(1.05);
-box-shadow:0 0 40px rgba(255,215,0,.7);
-}
-
-.note{
-margin-top:22px;
-font-size:15px;
-line-height:1.7;
-color:#ddd;
+transform:scale(1.03);
 }
 
 .footer{
 margin-top:30px;
 font-size:14px;
-color:#d7d7d7;
+line-height:1.8;
+color:#ddd;
 }
 
 @media(max-width:480px){
 
-h1{
-font-size:30px;
-}
+h1{font-size:30px;}
 
-.city{
-font-size:20px;
-}
-
-.msg{
-font-size:20px;
-}
-
-.btn{
-font-size:20px;
-}
+.msg{font-size:20px;}
 
 }
 
 </style>
+
 </head>
 
 <body>
 
 <div class="card">
 
-<div class="logo">🪔</div>
+<div class="diya">🪔</div>
 
 <h1>Jyoti Gruh Udhyog</h1>
 
@@ -160,49 +156,55 @@ font-size:20px;
 
 <div class="msg">
 
-🙏 <span>નમસ્કાર</span><br><br>
+🙏 <span>નમસ્કાર</span>
 
-અમારી પ્રોડક્ટ ખરીદવા બદલ<br>
-આપનો ખૂબ ખૂબ આભાર. ❤️<br><br>
+<br><br>
 
-તમારો કિંમતી પ્રતિભાવ<br>
+અમારી પ્રોડક્ટ ખરીદવા બદલ
+
+આપનો ખૂબ ખૂબ આભાર. ❤️
+
+<br><br>
+
+તમારો કિંમતી પ્રતિભાવ
+
 અમારા માટે ખૂબ જ મહત્વનો છે.
 
 </div>
 
 <a class="btn"
+
 href="https://jaydipraithatha10.github.io/Jyoti-review/">
 
 ⭐ પ્રતિભાવ આપવા અહીં Click કરો
 
-<div class="note">
-બટન પર ક્લિક કરતાં તમે સીધા અમારા Review Page પર પહોંચી જશો અને સરળતાથી તમારો પ્રતિભાવ આપી શકશો.
-</div>
+</a>
 
 <div class="footer">
-✨ Premium Quality<br>
-❤️ Customer Satisfaction<br><br>
 
-© 2026 Jyoti Gruh Udhyog
+✨ Premium Quality<br>
+❤️ Customer Satisfaction<br>
+🪔 Jyoti Gruh Udhyog - Rajkot
+
 </div>
 
 </div>
 
 </body>
+
 </html>
-</a>
+
 h1{
 margin-top:12px;
 font-size:34px;
-font-weight:700;
-background:linear-gradient(90deg,#FFD700,#FFF2A0,#FFD700);
+background:linear-gradient(90deg,#FFD700,#FFF4B2,#FFD700);
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
 }
 
 .city{
-margin-top:10px;
+margin-top:8px;
 letter-spacing:5px;
-font-size:22px;
-color:#F5D67A;
+color:#FFD86C;
+font-size:20px;
 }
