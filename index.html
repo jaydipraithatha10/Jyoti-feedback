@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="gu">
 <head>
@@ -6,22 +5,31 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>🪔 Jyoti Gruh Udhyog | Review</title>
+<title>🪔 Jyoti Gruh Udhyog | Customer Review</title>
 
-<meta property="og:title" content="🪔 Jyoti Gruh Udhyog | Review">
+<meta property="og:title" content="🪔 Jyoti Gruh Udhyog | Customer Review">
 <meta property="og:description" content="🙏 તમારો કિંમતી અને અમૂલ્ય સમય આપી Review આપવા બદલ ખૂબ ખૂબ આભાર. ⭐">
+
+<meta property="og:image" content="https://jaydipraithatha10.github.io/Jyoti-feedback/file_00000000f3887208ae1453dfc3b18d7a.png">
+
+<meta property="og:url" content="https://jaydipraithatha10.github.io/Jyoti-feedback/">
 
 <meta property="og:type" content="website">
 <meta property="og:locale" content="gu_IN">
 
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="🪔 Jyoti Gruh Udhyog | Review">
+<meta name="twitter:title" content="🪔 Jyoti Gruh Udhyog | Customer Review">
 <meta name="twitter:description" content="🙏 તમારો કિંમતી અને અમૂલ્ય સમય આપી Review આપવા બદલ ખૂબ ખૂબ આભાર. ⭐">
 
-<meta property="og:image" content="file_00000000f3887208ae1453dfc3b18d7a.png">
-<meta name="twitter:image" content="file_00000000f3887208ae1453dfc3b18d7a.png">
+<meta name="twitter:image" content="https://jaydipraithatha10.github.io/Jyoti-feedback/file_00000000f3887208ae1453dfc3b18d7a.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
-/* CSS અહીં આવશે (Part 2) */
+
 *{
 margin:0;
 padding:0;
@@ -30,30 +38,66 @@ font-family:'Poppins',sans-serif;
 }
 
 body{
-background:linear-gradient(135deg,#033322,#0b5b42,#012117);
+background:linear-gradient(135deg,#03281d,#0b5b42,#02251a);
+background-size:300% 300%;
+animation:bgMove 8s ease infinite;
 min-height:100vh;
 display:flex;
 justify-content:center;
 align-items:center;
 padding:20px;
+overflow:hidden;
+}
+
+@keyframes bgMove{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
 }
 
 .card{
 width:100%;
 max-width:430px;
-background:rgba(255,255,255,0.08);
-backdrop-filter:blur(15px);
-border:2px solid rgba(255,215,0,.4);
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(18px);
+border:2px solid rgba(255,215,0,.35);
 border-radius:28px;
 padding:35px 25px;
 text-align:center;
-box-shadow:0 20px 40px rgba(0,0,0,.45);
 color:#fff;
+box-shadow:0 20px 45px rgba(0,0,0,.45);
+position:relative;
+overflow:hidden;
+}
+.card::before{
+content:"";
+position:absolute;
+top:-50%;
+left:-50%;
+width:150%;
+height:150%;
+background:linear-gradient(
+120deg,
+transparent,
+rgba(255,255,255,.08),
+transparent
+);
+transform:rotate(25deg);
+animation:shine 6s linear infinite;
+}
+
+@keyframes shine{
+0%{
+transform:translateX(-100%) rotate(25deg);
+}
+100%{
+transform:translateX(100%) rotate(25deg);
+}
 }
 
 .logo{
 font-size:70px;
-margin-bottom:15px;
+margin-bottom:12px;
 animation:glow 2s infinite alternate;
 }
 
@@ -62,43 +106,42 @@ from{
 filter:drop-shadow(0 0 8px gold);
 }
 to{
-filter:drop-shadow(0 0 25px gold);
+filter:drop-shadow(0 0 22px gold);
 }
 }
 
 h1{
 font-size:32px;
-font-weight:700;
+margin-bottom:10px;
 background:linear-gradient(90deg,#FFD700,#FFF3A0,#FFD700);
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
-margin-bottom:15px;
 }
 
 .subtitle{
 font-size:22px;
-line-height:1.7;
-margin-bottom:30px;
-color:#fff;
+line-height:1.6;
+margin:22px 0;
+font-weight:600;
 }
 
 .rating-buttons{
 display:flex;
 flex-direction:column;
-gap:18px;
+gap:15px;
 }
 
 .rating-buttons button{
-padding:18px;
+padding:16px;
 font-size:20px;
 font-weight:700;
 border:none;
-border-radius:16px;
+border-radius:15px;
 cursor:pointer;
 background:linear-gradient(135deg,#FFD700,#FFF3A0,#FFD700);
 color:#033322;
+transition:.3s;
 box-shadow:0 0 18px rgba(255,215,0,.35);
-transition:.25s;
 }
 
 .rating-buttons button:hover{
@@ -106,19 +149,26 @@ transform:scale(1.03);
 }
 
 #thankyou{
-margin-top:30px;
-animation:fadeIn .6s;
+display:none;
+margin-top:25px;
+animation:fadeIn .5s;
 }
 
 #thankyou h2{
 font-size:30px;
 color:#FFD700;
-margin-bottom:10px;
+margin-bottom:12px;
 }
 
 #thankyou p{
-font-size:18px;
+font-size:19px;
 line-height:1.8;
+}
+
+.footer{
+margin-top:25px;
+font-size:14px;
+color:#ddd;
 }
 
 @keyframes fadeIn{
@@ -135,7 +185,7 @@ transform:translateY(0);
 @media(max-width:480px){
 
 h1{
-font-size:28px;
+font-size:27px;
 }
 
 .subtitle{
@@ -144,14 +194,13 @@ font-size:19px;
 
 .rating-buttons button{
 font-size:18px;
-padding:16px;
 }
 
 }
+
 </style>
 
 </head>
-
 <body>
 
 <div class="card">
@@ -174,69 +223,87 @@ padding:16px;
 
 </div>
 
-<div id="thankyou" style="display:none;">
+<div id="thankyou">
 
 <h2>💛 આભાર!</h2>
 
 <p>
-આપનો પ્રતિભાવ અમારા માટે ખૂબ જ કિંમતી છે.
+🙏 તમારો કિંમતી અને અમૂલ્ય સમય આપી Review આપવા બદલ<br><br>
+
+<b>Jyoti Gruh Udhyog</b> આપનો હૃદયપૂર્વક આભારી છે.<br><br>
+
+🙏 ફરીથી ખૂબ ખૂબ આભાર!
 </p>
 
+</div>
+
+<div class="footer">
+© Jyoti Gruh Udhyog
 </div>
 
 </div>
 
 <script>
 
-/* JavaScript અહીં આવશે (Part 3) */
-const whatsappNumber = "919712149344";
+const whatsappNumber="919712149344";
 
-function sendReview(rating) {
+function sendReview(rating){
 
-    // બટન છુપાવો
-    document.querySelector(".rating-buttons").style.display = "none";
+document.querySelector(".rating-buttons").style.display="none";
 
-    // Thank You બતાવો
-    document.getElementById("thankyou").style.display = "block";
+document.getElementById("thankyou").style.display="block";
 
-    let message = "";
+let message="";
 
-    if (rating === "Excellent") {
-        message = "😍 Excellent%0A%0Aમેં Jyoti Gruh Udhyog ની પ્રોડક્ટ લીધી હતી. ખૂબ જ સરસ લાગી.";
-    }
+if(rating==="Excellent"){
+message=`🪔 *Jyoti Gruh Udhyog*
 
-    if (rating === "Good") {
-        message = "😊 Good%0A%0Aમેં Jyoti Gruh Udhyog ની પ્રોડક્ટ લીધી હતી. સારી લાગી.";
-    }
+🌟 New Customer Review
 
-    if (rating === "Needs Improvement") {
-        message = "😕 Needs Improvement%0A%0Aમારી પાસે થોડા સૂચનો છે.";
-    }
+😍 Excellent
 
-    setTimeout(function () {
-        window.location.href =
-            "https://wa.me/" + whatsappNumber + "?text=" + message;
-    }, 2000);
+🙏 Thank You`;
+}
+
+if(rating==="Good"){
+message=`🪔 *Jyoti Gruh Udhyog*
+
+🌟 New Customer Review
+
+😊 Good
+
+🙏 Thank You`;
+}
+
+if(rating==="Needs Improvement"){
+message=`🪔 *Jyoti Gruh Udhyog*
+
+🌟 New Customer Review
+
+😕 Needs Improvement
+
+🙏 Thank You`;
+}
+
+setTimeout(function(){
+
+window.location.href="https://wa.me/"+whatsappNumber+"?text="+encodeURIComponent(message);
+
+},2500);
 
 }
 
-document
-    .getElementById("excellent")
-    .addEventListener("click", function () {
-        sendReview("Excellent");
-    });
+document.getElementById("excellent").onclick=function(){
+sendReview("Excellent");
+};
 
-document
-    .getElementById("good")
-    .addEventListener("click", function () {
-        sendReview("Good");
-    });
+document.getElementById("good").onclick=function(){
+sendReview("Good");
+};
 
-document
-    .getElementById("improve")
-    .addEventListener("click", function () {
-        sendReview("Needs Improvement");
-    });
+document.getElementById("improve").onclick=function(){
+sendReview("Needs Improvement");
+};
 
 </script>
 
