@@ -318,11 +318,16 @@ setTimeout(function(){
     const phone = whatsappNumber;
 const now = new Date();
 
-const date = now.toLocaleDateString('en-GB');
-const time = now.toLocaleTimeString('en-IN', {
-    hour: '2-digit',
-    minute: '2-digit'
-});
+const date =
+String(now.getDate()).padStart(2,'0') + "/" +
+String(now.getMonth()+1).padStart(2,'0') + "/" +
+now.getFullYear();
+
+const hours = now.getHours() % 12 || 12;
+const minutes = String(now.getMinutes()).padStart(2,'0');
+const ampm = now.getHours() >= 12 ? "PM" : "AM";
+
+const time = `${hours}:${minutes} ${ampm}`;
 
     const message =
 `🪔 *Jyoti Gruh Udhyog*
