@@ -157,6 +157,24 @@ button{
 .improve{
     background:linear-gradient(135deg,#ef6c00,#ff9800);
 }
+.loader{
+    width:50px;
+    height:50px;
+    border:5px solid rgba(255,255,255,.2);
+    border-top:5px solid #FFD700;
+    border-radius:50%;
+    margin:25px auto;
+    animation:spin 1s linear infinite;
+}
+
+@keyframes spin{
+    from{
+        transform:rotate(0deg);
+    }
+    to{
+        transform:rotate(360deg);
+    }
+}
 
 </style>
 </head>
@@ -225,29 +243,51 @@ button{
 <script>
 
 const whatsappNumber = "919712149344";
-
 function sendReview(rating){
 
-    document.getElementById("buttons").style.display = "none";
-    document.getElementById("thankyou").style.display = "block";
+    const card = document.querySelector(".card");
 
-    const msg = `🪔 Jyoti Gruh Udhyog
+    card.innerHTML = `
+        <div style="text-align:center;padding:40px 20px;">
+            <div style="font-size:60px;">🙏</div>
 
-🌟 New Customer Review
+            <h2 style="color:#FFD700;margin-top:15px;">
+                ખૂબ ખૂબ આભાર!
+            </h2>
 
-${rating}
+            <p style="color:#ffffff;font-size:18px;line-height:1.7;margin-top:15px;">
+                આપનો કિંમતી પ્રતિભાવ અમારા માટે ખૂબ જ મહત્વનો છે.
+            </p>
 
-🙏 Thank You`;
+            <p style="color:#cccccc;font-size:16px;margin-top:10px;">
+                WhatsApp ખુલવા માટે કૃપા કરીને રાહ જુઓ...
+            </p>
 
-    setTimeout(() => {
-        location.href =
+            <div class="loader"></div>
+        </div>
+    `;
+
+    setTimeout(function(){
+
+        const phone = "91XXXXXXXXXX";   // અહીં તમારો નંબર રાખવો
+
+        const message =
+`🪔 *Jyoti Gruh Udhyog*
+
+Customer Rating : ${rating}
+
+મારો પ્રતિભાવ મોકલી રહ્યો છું.`;
+
+        window.location.href =
         "https://wa.me/" +
-        whatsappNumber +
+        phone +
         "?text=" +
-        encodeURIComponent(msg);
-    },1800);
+        encodeURIComponent(message);
+
+    },1200);
 
 }
+
 
 </script>
 
