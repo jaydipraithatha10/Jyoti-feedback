@@ -1,1 +1,131 @@
+<!DOCTYPE html>
+<html lang="gu">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>🪔 Jyoti Gruh Udhyog | Customer Review</title>
+
+<meta property="og:title" content="🪔 Jyoti Gruh Udhyog | Customer Review">
+<meta property="og:description" content="🙏 તમારો કિંમતી અને અમૂલ્ય સમય આપી Review આપવા બદલ ખૂબ ખૂબ આભાર. ⭐">
+<meta property="og:url" content="https://jaydipraithatha10.github.io/Jyoti-feedback/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://jaydipraithatha10.github.io/Jyoti-feedback/preview.jpg">
+<meta property="og:image:secure_url" content="https://jaydipraithatha10.github.io/Jyoti-feedback/preview.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://jaydipraithatha10.github.io/Jyoti-feedback/preview.jpg">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    background:#0b5b42;
+    padding:20px;
+}
+
+.card{
+    max-width:430px;
+    width:100%;
+    background:#143c30;
+    color:#fff;
+    padding:30px;
+    border-radius:20px;
+    text-align:center;
+}
+
+button{
+    width:100%;
+    margin:10px 0;
+    padding:14px;
+    font-size:18px;
+    border:none;
+    border-radius:12px;
+    background:#ffd700;
+    color:#033322;
+    font-weight:bold;
+}
+
+#thankyou{
+    display:none;
+    margin-top:20px;
+}
+</style>
+</head>
+<body>
+
+<div class="card">
+
+    <h1>🪔 Jyoti Gruh Udhyog</h1>
+
+    <p style="margin:20px 0">
+        🙏 તમને અમારી પ્રોડક્ટ કેવી લાગી?
+    </p>
+
+    <div id="buttons">
+        <button onclick="sendReview('Excellent')">
+            😍 Excellent
+        </button>
+
+        <button onclick="sendReview('Good')">
+            😊 Good
+        </button>
+
+        <button onclick="sendReview('Needs Improvement')">
+            😕 Needs Improvement
+        </button>
+    </div>
+
+    <div id="thankyou">
+        <h2>💛 આભાર!</h2>
+
+        <p>
+            તમારો કિંમતી સમય આપવા બદલ ખૂબ ખૂબ આભાર.
+        </p>
+    </div>
+
+</div>
+
+<script>
+
+const whatsappNumber = "919712149344";
+
+function sendReview(rating){
+
+    document.getElementById("buttons").style.display = "none";
+    document.getElementById("thankyou").style.display = "block";
+
+    const msg = `🪔 Jyoti Gruh Udhyog
+
+🌟 New Customer Review
+
+${rating}
+
+🙏 Thank You`;
+
+    setTimeout(() => {
+        location.href =
+        "https://wa.me/" +
+        whatsappNumber +
+        "?text=" +
+        encodeURIComponent(msg);
+    },1800);
+
+}
+
+</script>
+
+</body>
+</html>
