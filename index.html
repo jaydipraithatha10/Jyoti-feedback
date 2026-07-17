@@ -61,18 +61,94 @@ button{
 #thankyou{
     display:none;
     margin-top:20px;
+}.welcome-box{
+    text-align:center;
+    margin-bottom:25px;
 }
+
+.logo{
+    font-size:58px;
+    margin-bottom:12px;
+    animation:glow 2s infinite alternate;
+}
+
+@keyframes glow{
+    from{
+        transform:scale(1);
+        filter:drop-shadow(0 0 5px gold);
+    }
+    to{
+        transform:scale(1.08);
+        filter:drop-shadow(0 0 18px gold);
+    }
+}
+
+.welcome-box h1{
+    color:#FFD700;
+    font-size:32px;
+    font-weight:700;
+    margin-bottom:8px;
+}
+
+.welcome-box h2{
+    color:#fff;
+    margin-bottom:18px;
+}
+
+.welcome-text{
+    color:#f3f3f3;
+    font-size:17px;
+    line-height:1.7;
+    margin-bottom:12px;
+}
+
+.question{
+    margin-top:18px;
+    font-size:22px;
+    color:#FFD700;
+    font-weight:bold;
+}
+
+.select-text{
+    color:#ddd;
+    margin-top:10px;
+    font-size:15px;
+}
+
 </style>
 </head>
 <body>
 
 <div class="card">
 
-    <h1>🪔 Jyoti Gruh Udhyog</h1>
+    <!-- Premium Welcome Section -->
+<div class="welcome-box">
 
-    <p style="margin:20px 0">
-        🙏 તમને અમારી પ્રોડક્ટ કેવી લાગી?
+    <div class="logo">🪔</div>
+
+    <h1>Jyoti Gruh Udhyog</h1>
+
+    <h2>🙏 નમસ્કાર</h2>
+
+    <p class="welcome-text">
+        આપનો કિંમતી અને અમૂલ્ય સમય આપવા બદલ
+        <strong>હાર્દિક આભાર.</strong>
     </p>
+
+    <p class="welcome-text">
+        આપનો અભિપ્રાય અમારા માટે ખૂબ જ કિંમતી છે
+        અને તે અમને વધુ સારી સેવા આપવા માટે પ્રેરણા આપે છે.
+    </p>
+
+    <div class="question">
+        <span>🌟 તમને અમારી પ્રોડક્ટ કેવી લાગી?</span>
+    </div>
+
+    <p class="select-text">
+        કૃપા કરીને નીચે આપેલ એક વિકલ્પ પસંદ કરો.
+    </p>
+
+</div>
 
     <div id="buttons">
         <button onclick="sendReview('Excellent')">
