@@ -175,6 +175,58 @@ button{
         transform:rotate(360deg);
     }
 }
+.success-box{
+    text-align:center;
+    animation:fadeIn .5s ease;
+}
+
+.success-icon{
+    font-size:70px;
+    animation:pop .8s ease;
+}
+
+.success-box h2{
+    color:#FFD700;
+    margin:15px 0;
+    font-size:30px;
+}
+
+.success-box p{
+    color:#fff;
+    font-size:18px;
+    line-height:1.7;
+}
+
+.small-text{
+    color:#d9d9d9;
+    margin-top:12px;
+    font-size:15px;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes pop{
+    0%{
+        transform:scale(.5);
+        opacity:0;
+    }
+    70%{
+        transform:scale(1.15);
+    }
+    100%{
+        transform:scale(1);
+        opacity:1;
+    }
+}
 
 </style>
 </head>
@@ -247,25 +299,24 @@ function sendReview(rating){
 
     const card = document.querySelector(".card");
 
-    card.innerHTML = `
-        <div style="text-align:center;padding:40px 20px;">
-            <div style="font-size:60px;">🙏</div>
+    
+    <div class="success-box">
 
-            <h2 style="color:#FFD700;margin-top:15px;">
-                ખૂબ ખૂબ આભાર!
-            </h2>
+    <div class="success-icon">🎉</div>
 
-            <p style="color:#ffffff;font-size:18px;line-height:1.7;margin-top:15px;">
-                આપનો કિંમતી પ્રતિભાવ અમારા માટે ખૂબ જ મહત્વનો છે.
-            </p>
+    <h2>ખૂબ ખૂબ આભાર!</h2>
 
-            <p style="color:#cccccc;font-size:16px;margin-top:10px;">
-                WhatsApp ખુલવા માટે કૃપા કરીને રાહ જુઓ...
-            </p>
+    <p>
+        આપનો કિંમતી પ્રતિભાવ સફળતાપૂર્વક નોંધવામાં આવ્યો છે.
+    </p>
 
-            <div class="loader"></div>
-        </div>
-    `;
+    <p class="small-text">
+        થોડા જ ક્ષણોમાં WhatsApp ખુલશે...
+    </p>
+
+    <div class="loader"></div>
+
+</div>
 
     setTimeout(function(){
 
