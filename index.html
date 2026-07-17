@@ -114,6 +114,49 @@ button{
     margin-top:10px;
     font-size:15px;
 }
+.review-buttons{
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+    margin-top:25px;
+}
+
+.review-btn{
+    width:100%;
+    border:none;
+    border-radius:18px;
+    padding:18px;
+    color:#fff;
+    font-size:20px;
+    font-weight:700;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:12px;
+    transition:.25s;
+    box-shadow:0 8px 20px rgba(0,0,0,.25);
+}
+
+.review-btn:active{
+    transform:scale(.97);
+}
+
+.emoji{
+    font-size:28px;
+}
+
+.excellent{
+    background:linear-gradient(135deg,#00c853,#43a047);
+}
+
+.good{
+    background:linear-gradient(135deg,#1976d2,#42a5f5);
+}
+
+.improve{
+    background:linear-gradient(135deg,#ef6c00,#ff9800);
+}
 
 </style>
 </head>
@@ -150,19 +193,24 @@ button{
 
 </div>
 
-    <div id="buttons">
-        <button onclick="sendReview('Excellent')">
-            😍 Excellent
-        </button>
+    <div class="review-buttons">
 
-        <button onclick="sendReview('Good')">
-            😊 Good
-        </button>
+    <button class="review-btn excellent" onclick="sendReview('😍 Excellent')">
+        <span class="emoji">😍</span>
+        <span class="text">Excellent</span>
+    </button>
 
-        <button onclick="sendReview('Needs Improvement')">
-            😕 Needs Improvement
-        </button>
-    </div>
+    <button class="review-btn good" onclick="sendReview('😊 Good')">
+        <span class="emoji">😊</span>
+        <span class="text">Good</span>
+    </button>
+
+    <button class="review-btn improve" onclick="sendReview('😕 Needs Improvement')">
+        <span class="emoji">😕</span>
+        <span class="text">Needs Improvement</span>
+    </button>
+
+</div>
 
     <div id="thankyou">
         <h2>💛 આભાર!</h2>
