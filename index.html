@@ -299,8 +299,8 @@ function sendReview(rating){
 
     const card = document.querySelector(".card");
 
-    
-    <div class="success-box">
+card.innerHTML = `
+<div class="success-box">
 
     <div class="success-icon">🎉</div>
 
@@ -317,27 +317,26 @@ function sendReview(rating){
     <div class="loader"></div>
 
 </div>
+`;
 
-    setTimeout(function(){
+setTimeout(function(){
 
-        const phone = whatsappNumber;  // અહીં તમારો નંબર રાખવો
+    const phone = whatsappNumber;
 
-        const message =
+    const message =
 `🪔 *Jyoti Gruh Udhyog*
 
 Customer Rating : ${rating}
 
 મારો પ્રતિભાવ મોકલી રહ્યો છું.`;
 
-        window.location.href =
-        "https://wa.me/" +
-        phone +
-        "?text=" +
-        encodeURIComponent(message);
+    window.location.href =
+    "https://wa.me/" +
+    phone +
+    "?text=" +
+    encodeURIComponent(message);
 
-    },1200);
-
-}
+},1200);
 
 
 </script>
