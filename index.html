@@ -322,6 +322,13 @@ card.innerHTML = `
 setTimeout(function(){
 
     const phone = whatsappNumber;
+const now = new Date();
+
+const date = now.toLocaleDateString('en-GB');
+const time = now.toLocaleTimeString('en-IN', {
+    hour: '2-digit',
+    minute: '2-digit'
+});
 
     const message =
 `🪔 *Jyoti Gruh Udhyog*
